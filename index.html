@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحدى الشلمندي</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>اوعي تضحك</h1>
+        <p>لو ضحكت تبقا خول</p>
+        <button id="startBtn">دوس هنا علشان تبدأ التحدي</button>
+    </div>
+    <script>
+        // عند الضغط على زر "ابدأ التحدي" يتم فتح صفحة جديدة
+        document.getElementById("startBtn").addEventListener("click", () => {
+            window.open("challenge.html", "_blank");
+        });
+    </script>
+</body>
+</html>

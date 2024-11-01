@@ -1,0 +1,83 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 6vw; /* حجم مرن مناسب للهواتف */
+}
+
+#startBtn, #endBtn {
+    padding: 3vw 5vw; /* حجم مرن للأزرار */
+    font-size: 4vw;   /* تكبير الخط ليتناسب مع الشاشة */
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#startBtn:hover, #endBtn:hover {
+    background-color: #0056b3;
+}
+
+/* إعدادات لإيموجيات الضاحكة */
+.rain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background: transparent;
+    z-index: -1;
+}
+
+.face, .emoji {
+    position: absolute;
+    font-size: 6vw; /* حجم مرن مناسب للهواتف */
+    animation: fall linear infinite;
+    top: -10vh; /* بدء السقوط من أعلى الشاشة */
+}
+
+/* حركة سقوط الإيموجي */
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* إعدادات إضافية للأجهزة الصغيرة */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    #startBtn, #endBtn {
+        padding: 4vw 6vw;
+        font-size: 5vw;
+    }
+}

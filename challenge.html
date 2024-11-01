@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحدى الشلمندي</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="emoji-rain">
+    <audio id="music" src="music.mp3" autoplay loop></audio>
+    <div class="challenge-container">
+        <button id="stopBtn">خلاص ياعم ضحكت 😂</button>
+    </div>
+    <script src="emoji-rain.js"></script>
+    <script>
+        // عند الضغط على زر "خلاص ياعم ضحكت"، توقف الموسيقى وتغلق الصفحة
+        document.getElementById("stopBtn").addEventListener("click", () => {
+            document.getElementById("music").pause();
+            window.close();
+        });
+    </script>
+</body>
+</html>
